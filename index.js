@@ -24,6 +24,14 @@ $(document).on('keydown', function () {
     }
 })
 
+$(document).on('touchstart', function () {
+    if (!started) {
+        $('#level-title').text('Level ' + level);
+        nextSequence();
+        started = true;
+    }
+})
+
 function chekAnswer(currentLevel) {
     if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
         if (gamePattern.length === userClickedPattern.length) {
@@ -76,31 +84,6 @@ function startOver() {
 
 
 
-
-
-
-
-//     function makeSound() {
-//     switch (randomChosenColour) {
-//         case "red":
-//             var audio = new Audio('sounds/red.mp3');
-//             audio.play();
-//             break;
-//         case "blue":
-//             var audio1 = new Audio('sounds/blue.mp3');
-//             audio1.play();
-//             break;
-//         case "green":
-//             var audio2 = new Audio('sounds/green.mp3');
-//             audio2.play();
-//             break;
-//         case "yellow":
-//             var audio3 = new Audio('sounds/yellow.mp3');
-//             audio3.play();
-//             break;
-//         default: console.log(randomChosenColour);
-//     }
-// }}
 
 
 
