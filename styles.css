@@ -51,3 +51,14 @@ body {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
+
+@media (min-width:650px) {
+  .container{
+    display: flex;
+  }
+
+  .btn{
+    height: 300px;
+    width: 300px;
+  }
+}
